@@ -1,38 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: grey;
+  color: rgb(220, 221, 222);
+  font-weight: 300;
+  margin: 0px;
+}
+
+
 .App {
-  text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+nav {
+  background-color: rgb(35, 39, 42);
+  height: 50px;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  background-color: rgb(35, 39, 42);
+  height: 40px;
+  border: 1px transparent;
+  color: whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  padding: 5px;
+  
+
+}
+
+h2 {
+  margin-left: 5px;
+}
+
+.contMovies, .contSeries {
+  padding: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
