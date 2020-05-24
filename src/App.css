@@ -1,18 +1,13 @@
 * {
+  margin: 0;
   box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: grey;
   color: rgb(220, 221, 222);
-  font-weight: 300;
   margin: 0px;
-}
-
-
-.App {
-  margin: 0;
 }
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import './Card.css';
+import './Movies.css';
 
-const Card = ({ movieName, moviePoster}) => {
+const Movies = ({ movieName, moviePoster}) => {
     function whatMovie() {
         console.log("hiciste click en " + movieName)
         
@@ -9,11 +9,11 @@ const Card = ({ movieName, moviePoster}) => {
       }
 
     return (
-        <div className="card" onClick={whatMovie}>
+        <div className="movies" onClick={whatMovie}>
            {/* <div className="movieImg" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w500${moviePoster})`}}></div> */}
          <h2>{movieName}</h2>     
         </div>
     )
 }
 
-export default Card;
+export default Movies;
