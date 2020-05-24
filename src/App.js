@@ -44,14 +44,27 @@ height: 20px;
 margin: 10px;
 active: rgb(33, 150, 243);
 `
+/* const [search, setSearch] = useState('');
+const handleClick = (input.value) => {search}
+console.log(input.value)
+const handleClick = e => {
+  console.log(e.target.value)
+  setSearch(e.target.value)
+}
+const searchEntertainment = () => {
+  fetch(`https://api.themoviedb.org/3/${search}/multi?api_key=c6b30101367115868190fb5d2fcf4c4c&language=en-US&page=1&include_adult=false`)
+    .then(res => res.json())
+    .then(data => setsearchEntertainment(data.results))
 
-/* const handleClick = (input.value) => {search}
-  
+}   */
 
-  console.log(input.value) onClick={handleClick}*/
+
+
 
 function App() {
   console.log("Hola")
+
+  
   
 return  (
   <Router>
@@ -65,7 +78,7 @@ return  (
       </nav>
     
       <Switch>
-      <Route exact path="/" component={Home}></Route>
+      <Route exact path="/" component={HomeComp}></Route>
       <Route exact path="/movies" component={Movies}></Route>
       <Route exact path="/series" component={Series}></Route>
       </Switch>
