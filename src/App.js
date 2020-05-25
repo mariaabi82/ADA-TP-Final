@@ -63,9 +63,6 @@ const searchEntertainment = () => {
 
 
 function App() {
- 
-
-  
   
 return  (
   <Router>
