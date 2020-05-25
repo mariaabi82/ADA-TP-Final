@@ -1,16 +1,16 @@
 import React from 'react';
 import './CardS.css';
 
-const CardS = ({ seriesName, seriesPoster }) => {
+const CardS = ({ serieName, seriePoster }) => {
     function whatSeries() {
-        console.log("hiciste click en " + seriesName)
+        console.log("hiciste click en " + serieName)
     
       }
 
     return (
         <div className="cardS" onClick={whatSeries}>
-           <div className="serieImg" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w500${seriesPoster})`}}></div>
-         <h2>{seriesName}</h2>     
+           <div className="serieImg" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w500${seriePoster})`}}></div>
+         <h2>{serieName}</h2>     
         </div>
     )
 }

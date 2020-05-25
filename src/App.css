@@ -1,18 +1,21 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 
 }
 
 body {
-  background-color: grey;
+  background-color: rgb(54, 57, 63);
+  font-family: "Roboto, Helvetica Neue, Helvetica, Arial, sans-serif";
   color: rgb(220, 221, 222);
+  font-weight: 300;
   margin: 0px;
 }
 
 
 nav {
   background-color: rgb(35, 39, 42);
+  font-family: "Roboto, Helvetica Neue, Helvetica, Arial, sans-serif";
   height: 70px;
   padding: 5px;
 }
@@ -26,6 +29,6 @@ input {
 
 .placeholder {
   color: whitesmoke;
-  size: 14px;
+  size: 16px;
 }
 

@@ -6,7 +6,7 @@ const Card = ({ movieName, moviePoster}) => {
         console.log("hiciste click en " + movieName)
         
     
-      }
+    }
 
     return (
         <div className="card" onClick={whatMovie}>

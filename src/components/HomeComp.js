@@ -23,7 +23,7 @@ margin: 10px;
 `
 
 function HomeComp () {
-    console.log("Hola")
+    
     const [movies, setMovies] = useState([]);
     const [series, setSeries] = useState([]);
 
@@ -55,10 +55,10 @@ function HomeComp () {
             <h2>Películas que son tendencia</h2><Link to="/trendingmovies"><ArrowM /></Link>
             <div className="contMovies">
           
-                { movies.map((movie, i) => {
+                { movies.map((movie, i) => {     
                 return (
                 <Link to={`/movies/${movie.title}`}>
-                <Card key={i} className="card" movieName={movie.title} moviePoster={movie.backdrop_path} />
+                <Card key={i} className="card" movieName={movie.title} moviePoster={movie.poster_path} />
                 </Link>
                 )
             })
@@ -71,8 +71,8 @@ function HomeComp () {
             <div className="contSeries">
                 { series.map((serie, i) =>  { 
                 return (
-                <Link to={`/series/${series.original_name}`}>
-                <CardS key={i} className="cardS" seriesName={series.original_name} seriesPoster={series.backdrop_path} />
+                <Link to={`/series/${serie.original_name}`}>
+                <CardS key={i} className="cardS" serieName={serie.original_name} seriePoster={serie.poster_path} />
                 </Link>
                 )
             })

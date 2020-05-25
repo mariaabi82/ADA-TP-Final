@@ -9,7 +9,6 @@ import { Home } from '@styled-icons/feather/Home';
 import { Video } from '@styled-icons/feather/Video';
 import { Tv } from '@styled-icons/feather/Tv';
 import { Search } from '@styled-icons/feather/Search';
-
 //import { ArrowLeft } from "styled-icons/feather/ArrowLeft";
 //import { Imdb } from "styled-icons/fa-brands/Imdb";
 //import { FacebookSquare } from "styled-icons/fa-brands/FacebookSquare";
