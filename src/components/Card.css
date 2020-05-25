@@ -19,5 +19,12 @@
 
 /* Hacer que se agrande sólo la imagen */
 
+.card a:link {
+    color: whitesmoke;
+    text-decoration: none;
+  }
 
+.card a:visited, :active {
+    text-decoration: none;
+  }
 

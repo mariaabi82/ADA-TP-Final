@@ -18,3 +18,11 @@
 }
 
 /* Hacer que se agrande sólo la imagen */
+
+.cardS a:link {
+    color: whitesmoke;
+  }
+
+.cardS a:visited, :active {
+    text-decoration: none;
+  }

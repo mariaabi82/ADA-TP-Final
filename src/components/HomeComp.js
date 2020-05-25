@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch, useParams } from 'react-router-dom';
 import Card from './Card';
 import CardS from './CardS';
 import TrendingMovies from '../components/Trending/TrendingMovies';
@@ -45,19 +45,18 @@ function HomeComp () {
   console.log(movies.slice(0,5))
   console.log(series)
 
-  
 
  
 
     return (
-        <Router>
+        <>
         <div className="wrapper">
             <h2>Películas que son tendencia</h2><Link to="/trendingmovies"><ArrowM /></Link>
             <div className="contMovies">
           
                 { movies.map((movie, i) => {     
                 return (
-                <Link to={`/movies/${movie.title}`}>
+                <Link to={`/movies/${movie.title}`} className="link">
                 <Card key={i} className="card" movieName={movie.title} moviePoster={movie.poster_path} />
                 </Link>
                 )
@@ -65,13 +64,14 @@ function HomeComp () {
             };
             </div>
         </div>
+    
 
         <div className="wrapperSeries">
             <h2>Series que son tendencia</h2><Link to="/trendingseries"><ArrowS /></Link>
             <div className="contSeries">
                 { series.map((serie, i) =>  { 
                 return (
-                <Link to={`/series/${serie.original_name}`}>
+                <Link to={`/series/${serie.original_name}`} className="link">
                 <CardS key={i} className="cardS" serieName={serie.original_name} seriePoster={serie.poster_path} />
                 </Link>
                 )
@@ -79,13 +79,8 @@ function HomeComp () {
             };
             </div>
         </div>
-        <Switch>
-        <Route path="/trendingmovies" component={TrendingMovies}></Route>
-        <Route path="/trendingseries" component={TrendingSeries}></Route>
-        <Route path="/movies/:name" component={EachMovie}></Route>
-        <Route path="/series/:name" component={EachSeries}></Route>
-        </Switch>
-        </Router>
+       
+       </>
     )
 }
 

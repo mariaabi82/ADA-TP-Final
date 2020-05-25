@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch, useParams } from 'react-router-dom';
 import HomeComp from './components/HomeComp';
 import Movies from './components/Movies';
 import Series from './components/Series';
+import TrendingMovies from './components/Trending/TrendingMovies';
+import TrendingSeries from './components/Trending/TrendingSeries';
+import EachMovie from './components/EachMovie';
+import EachSeries from './components/EachSeries';
 import './App.css';
 import styled from 'styled-components';
 import { Home } from '@styled-icons/feather/Home';
@@ -23,7 +27,7 @@ const HomeIcon = styled(Home)`
 color: rgb(220, 221, 222);
 height: 35px;
 margin: 15px;
-active: rgb(33, 150, 243);
+:active: rgb(33, 150, 243);
 `
 const VideoIcon = styled(Video)`
 color: rgb(220, 221, 222);
@@ -35,13 +39,11 @@ const TvIcon = styled(Tv)`
 color: rgb(220, 221, 222);
 height: 35px;
 margin: 15px;
-::active: rgb(33, 150, 243);
 `
 const SearchIcon = styled(Search)`
 color: rgb(220, 221, 222);
 height: 35px;
 margin: 15px;
-::active: rgb(33, 150, 243);
 `
 /* const [search, setSearch] = useState('');
 const handleClick = (input.value) => {search}
@@ -61,7 +63,7 @@ const searchEntertainment = () => {
 
 
 function App() {
-  console.log("Hola")
+ 
 
   
   
@@ -77,9 +79,13 @@ return  (
       </nav>
     
       <Switch>
-      <Route exact path="/" component={HomeComp}></Route>
-      <Route path="/movies" component={Movies}></Route>
-      <Route path="/series" component={Series}></Route>
+        <Route exact path="/" component={HomeComp}></Route>
+        <Route exact path="/movies" component={Movies}></Route>
+        <Route exact path="/series" component={Series}></Route> 
+        <Route exact path="/trendingmovies" component={TrendingMovies}></Route>
+        <Route exact path="/trendingseries" component={TrendingSeries}></Route>
+        <Route exact path="/movies/:name" component={EachMovie}></Route>
+        <Route exact path="/series/:name" component={EachSeries}></Route>
       </Switch>
 
     </div> 
