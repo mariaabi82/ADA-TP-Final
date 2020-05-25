@@ -1,0 +1,20 @@
+.wrapper {
+    padding: 5px;
+    display: inline-block;
+  
+  }
+  
+  h2 {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  .contMovies, .contSeries {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  

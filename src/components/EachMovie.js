@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-function TrendingSeries () {
+function EachMovie () {
 
     return (
-        <div>Estás en Trending Series</div>
+        <div>Estás en Each Movie</div>
 
     )
 }
 
-export default TrendingSeries;
+export default EachMovie;

@@ -22,27 +22,27 @@ import { Search } from '@styled-icons/feather/Search';
 
 const HomeIcon = styled(Home)`
 color: rgb(220, 221, 222);
-height: 20px;
-margin: 10px;
+height: 35px;
+margin: 15px;
 active: rgb(33, 150, 243);
 `
 const VideoIcon = styled(Video)`
 color: rgb(220, 221, 222);
-height: 20px;
-margin: 10px;
+height: 35px;
+margin: 15px;
 active: rgb(33, 150, 243);
 `
 const TvIcon = styled(Tv)`
 color: rgb(220, 221, 222);
-height: 20px;
-margin: 10px;
-active: rgb(33, 150, 243);
+height: 35px;
+margin: 15px;
+::active: rgb(33, 150, 243);
 `
 const SearchIcon = styled(Search)`
 color: rgb(220, 221, 222);
-height: 20px;
-margin: 10px;
-active: rgb(33, 150, 243);
+height: 35px;
+margin: 15px;
+::active: rgb(33, 150, 243);
 `
 /* const [search, setSearch] = useState('');
 const handleClick = (input.value) => {search}
@@ -79,8 +79,8 @@ return  (
     
       <Switch>
       <Route exact path="/" component={HomeComp}></Route>
-      <Route exact path="/movies" component={Movies}></Route>
-      <Route exact path="/series" component={Series}></Route>
+      <Route path="/movies" component={Movies}></Route>
+      <Route path="/series" component={Series}></Route>
       </Switch>
 
     </div> 

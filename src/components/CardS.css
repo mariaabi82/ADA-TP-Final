@@ -1,12 +1,20 @@
-.card {
+.cardS {
     height: 415px;
     width: 250px;
     margin: 10px;
     padding: 10px;
+ 
 }
 
-.serieImg {
+.movieImg {
     height: 300px;
     background-position: center;
     background-size: cover;
 }
+
+.card:hover .movieImg {
+    transition: all 3s;
+    transform: scale(1.1)
+}
+
+/* Hacer que se agrande sólo la imagen */

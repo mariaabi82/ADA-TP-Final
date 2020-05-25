@@ -13,7 +13,7 @@ body {
 
 nav {
   background-color: rgb(35, 39, 42);
-  height: 50px;
+  height: 70px;
   padding: 5px;
 }
 
@@ -21,23 +21,11 @@ input {
   background-color: rgb(35, 39, 42);
   height: 40px;
   border: 1px transparent;
+
+}
+
+.placeholder {
   color: whitesmoke;
+  size: 14px;
 }
-
-.wrapper {
-  padding: 5px;
-  
-
-}
-
-h2 {
-  margin-left: 5px;
-}
-
-.contMovies, .contSeries {
-  padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 

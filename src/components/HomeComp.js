@@ -4,6 +4,8 @@ import Card from './Card';
 import CardS from './CardS';
 import TrendingMovies from '../components/Trending/TrendingMovies';
 import TrendingSeries from '../components/Trending/TrendingSeries';
+import EachMovie from './EachMovie';
+import EachSeries from './EachSeries';
 import './HomeComp.css'
 import styled from 'styled-components';
 import { ArrowRight } from "@styled-icons/feather/ArrowRight";
@@ -12,6 +14,7 @@ const ArrowM = styled(ArrowRight)`
 color: rgb(33, 150, 243);
 height: 20px;
 margin: 10px;
+display: flex;
 `
 const ArrowS = styled(ArrowRight)`
 color: rgb(33, 150, 243);
@@ -49,28 +52,39 @@ function HomeComp () {
     return (
         <Router>
         <div className="wrapper">
-            <h2>Películas que son tendencia</h2><Link ><ArrowM /></Link>
+            <h2>Películas que son tendencia</h2><Link to="/trendingmovies"><ArrowM /></Link>
             <div className="contMovies">
           
                 { movies.map((movie, i) => {
-            
-                return <Card key={i} className="card" movieName={movie.title} moviePoster={movie.backdrop_path} />
+                return (
+                <Link to={`/movies/${movie.title}`}>
+                <Card key={i} className="card" movieName={movie.title} moviePoster={movie.backdrop_path} />
+                </Link>
+                )
             })
             };
             </div>
         </div>
 
         <div className="wrapperSeries">
-            <h2>Series que son tendencia</h2><Link ><ArrowS /></Link>
+            <h2>Series que son tendencia</h2><Link to="/trendingseries"><ArrowS /></Link>
             <div className="contSeries">
-                { series.map((serie, i) => {
-                return <CardS key={i} className="cardS" serieName={serie.original_name} seriePoster={serie.backdrop_path} />
+                { series.map((serie, i) =>  { 
+                return (
+                <Link to={`/series/${series.original_name}`}>
+                <CardS key={i} className="cardS" seriesName={series.original_name} seriesPoster={series.backdrop_path} />
+                </Link>
+                )
             })
             };
             </div>
         </div>
-        <Route exact path="/trendingmovies" component={TrendingMovies}></Route>
-        <Route exact path="/trendingseries" component={TrendingSeries}></Route> 
+        <Switch>
+        <Route path="/trendingmovies" component={TrendingMovies}></Route>
+        <Route path="/trendingseries" component={TrendingSeries}></Route>
+        <Route path="/movies/:name" component={EachMovie}></Route>
+        <Route path="/series/:name" component={EachSeries}></Route>
+        </Switch>
         </Router>
     )
 }
